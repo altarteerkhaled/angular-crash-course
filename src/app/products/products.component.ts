@@ -33,4 +33,7 @@ export class ProductsComponent implements OnInit{
     this.products = this.service.getAll();
   }
 
+  refreshProductList() {
+    this.products = this.service.getAll();
+  }
 }

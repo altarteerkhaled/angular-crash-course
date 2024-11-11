@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {ProductRepresentation} from "../services/api/models/product-representation";
 import {ProductService} from "../services/api/products/product.service";
 
@@ -13,8 +13,17 @@ export class ProductDetailsComponent {
   ) {
   }
 
+
   @Input()
   product: ProductRepresentation = {};
 
+  @Output()
+  newItemEvent = new EventEmitter<any>();
 
+
+
+  deleteProduct() {
+    this.service.deleteProductFromStorage(this.product);
+    this.newItemEvent.emit();
+  }
 }

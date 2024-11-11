@@ -9,5 +9,8 @@
       <span class="rating-value">{{product.rating?.rate}}</span>
       <span class="rating-count">{{product.rating?.count}}</span>
     </div>
+    <div class="example-button-row" style="position: absolute; bottom: 4%;right: 2%">
+      <button type="button" mat-flat-button color="warn" (click)="deleteProduct()">Delete</button>
+    </div>
   </div>
 </div>
