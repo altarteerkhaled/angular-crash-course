@@ -20,6 +20,7 @@ export class NewProductComponent {
   saveNewProduct(){
     this.service.createProduct(this.product).subscribe({
       next: (result) => {
+        this.service.addNewProduct(this.product);
         this.router.navigate(['products']);
       }
     });

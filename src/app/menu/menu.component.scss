@@ -1,34 +1,31 @@
-.menu{
+section {
+  display: table;
+}
+
+.example-label {
+  display: table-cell;
+  font-size: 14px;
+  margin-left: 8px;
+  min-width: 120px;
+}
+
+.example-button-row {
+  display: table-cell;
+  max-width: 600px;
+}
+
+.example-button-row .mat-mdc-button-base {
+  margin: 8px 8px 8px 0;
+}
+
+.example-flex-container {
   display: flex;
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
-
-.menu ul {
-  flex: 1;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+w
+.example-button-container {
   display: flex;
-}
-
-.menu li {
-  flex: 1;
-  margin-right: 20px;
-}
-
-.menu li:last-child {
-  margin-right: 0;
-}
-
-.menu a {
-  color: #fff;
-  text-decoration: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
-.menu a:hover {
-  background-color: #555;
+  justify-content: center;
+  width: 120px;
 }

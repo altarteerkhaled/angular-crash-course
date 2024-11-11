@@ -22,4 +22,20 @@ export class ProductService {
     const productsUrl = this.baseUrl+'products';
     return this.http.post<ProductRepresentation>(productsUrl, product);
   }
+
+  getAll() {
+    let value = localStorage.getItem("products");
+    if (value != '' && value != null && typeof value != "undefined"){
+      return JSON.parse(value!);
+    }
+  }
+
+  addNewProduct(product: ProductRepresentation) {
+    let value = localStorage.getItem("products");
+    if (value != '' && value != null && typeof value != "undefined"){
+       let myList = JSON.parse(value!);
+       myList.push(product);
+      localStorage.setItem("products", JSON.stringify(myList));
+    }
+  }
 }

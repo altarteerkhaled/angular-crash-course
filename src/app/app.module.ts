@@ -7,12 +7,15 @@ import {FormsModule} from "@angular/forms";
 import {MessageDetailsComponent} from "./message-details/message-details.component";
 import {MenuComponent} from "./menu/menu.component";
 import {AboutComponent} from "./about/about.component";
-import {ProductService} from "./services/api/products/product.service";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {MyFirstService} from "../services/my-first.service";
 import {ProductsComponent} from "./products/products.component";
 import {ProductDetailsComponent} from "./product-details/product-details.component";
 import {NewProductComponent} from "./new-product/new-product.component";
+import {provideAnimationsAsync} from '@angular/platform-browser/animations/async';
+import {MatButtonModule} from '@angular/material/button';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {MatIcon} from "@angular/material/icon";
 
 @NgModule({
   declarations: [
@@ -25,15 +28,19 @@ import {NewProductComponent} from "./new-product/new-product.component";
     ProductDetailsComponent,
     NewProductComponent
   ],
-  imports:[
+  imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatButtonModule,
+    BrowserAnimationsModule,
+    MatIcon
   ],
   providers:[
     MyFirstService,
-    HttpClient
+    HttpClient,
+    provideAnimationsAsync()
   ],
   bootstrap:[AppComponent]
 })
