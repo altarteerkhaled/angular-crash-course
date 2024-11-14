@@ -22,12 +22,12 @@ export class ProductsComponent implements OnInit{
   ngOnInit(): void {
 
     // Run this at first
-    // this.service.getAllProductsWithLimit().subscribe({
-    //   next: (result: Array<ProductRepresentation>)=> {
-    //     this.products = result;
-    //     localStorage.setItem("products", JSON.stringify(this.products));
-    //   }
-    // });
+    this.service.getAllProductsWithLimit().subscribe({
+      next: (result: Array<ProductRepresentation>)=> {
+        this.products = result;
+        localStorage.setItem("products", JSON.stringify(this.products));
+      }
+    });
 
     // Then comment the above and keep running the below
     this.products = this.service.getAll();

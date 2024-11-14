@@ -7,5 +7,7 @@ export interface ProductRepresentation{
   category?: string,
   image?: string,
   price?: number
-  rating?: RatingRepresentation
+  rating?: RatingRepresentation,
+  discountPercentage?: number,
+  priceAfterDiscount?: number
 }

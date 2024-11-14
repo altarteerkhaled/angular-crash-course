@@ -1,0 +1,27 @@
+<div class="login-container">
+  <mat-card class="login-card">
+    <mat-card-header>
+      <mat-card-title>Welcome Back!</mat-card-title>
+      <mat-card-subtitle>Login to your account</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <form>
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Enter your email" type="email" [(ngModel)]="email" name="email"/>
+          <mat-error>Please enter a valid email</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Password</mat-label>
+          <input matInput placeholder="Enter your password" type="password" [(ngModel)]="password" name="password"/>
+          <mat-error>Password is required</mat-error>
+        </mat-form-field>
+        <button mat-raised-button type="submit" (click)="login()" style="color: white">Login</button>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <a href="#">Forgot Password?</a>
+      <a href="#">Sign Up</a>
+    </mat-card-actions>
+  </mat-card>
+</div>

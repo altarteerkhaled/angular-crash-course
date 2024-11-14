@@ -1,0 +1,29 @@
+<div class="home-page">
+  <div class="banner">
+    <h1>Welcome to Our Product Store!</h1>
+    <p>Explore the best products tailored for you</p>
+    <button mat-flat-button color="primary" routerLink="/products">Shop Now</button>
+  </div>
+
+  <div class="featured-products">
+    <h2>Featured Products</h2>
+    <div class="products-grid">
+      <div *ngFor="let product of products" class="product-card" >
+        <img [src]="product.image" alt="{{ product.title }}" />
+        <h3> <strong>{{ product.title }}</strong></h3>
+        <p>{{ product.description | slice:0:50 }}...</p>
+        <button mat-raised-button color="accent">Buy Now</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="categories">
+    <h2>Categories</h2>
+    <div class="category-list">
+      <div *ngFor="let category of categories" class="category-card">
+        <h3>{{ category.name }}</h3>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -16,6 +16,29 @@ import {provideAnimationsAsync} from '@angular/platform-browser/animations/async
 import {MatButtonModule} from '@angular/material/button';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MatIcon} from "@angular/material/icon";
+import {LoginPageComponent} from "./login-page/login-page.component";
+
+
+import { InputGroupModule } from 'primeng/inputgroup';
+import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
+import {InputTextModule} from "primeng/inputtext";
+import {MatError, MatFormField, MatLabel} from "@angular/material/form-field";
+import {
+  MatCard,
+  MatCardActions,
+  MatCardContent,
+  MatCardHeader,
+  MatCardSubtitle,
+  MatCardTitle
+} from "@angular/material/card";
+import {MatInput} from "@angular/material/input";
+import {AdminDashboardComponent} from "./admin-dashboard/admin-dashboard.component";
+import {UserDashboardComponent} from "./user-dashboard/user-dashboard.component";
+import {AdminMenuComponent} from "./admin-menu/admin-menu.component";
+import {UserMenuComponent} from "./user-menu/user-menu.component";
+import {DeleteProductPopUpComponent} from "./delete-product-pop-up/delete-product-pop-up.component";
+import {MatDialogModule} from "@angular/material/dialog";
+import {HomePageComponent} from "./home-page/home-page.component";
 
 @NgModule({
   declarations: [
@@ -26,7 +49,14 @@ import {MatIcon} from "@angular/material/icon";
     AboutComponent,
     ProductsComponent,
     ProductDetailsComponent,
-    NewProductComponent
+    NewProductComponent,
+    LoginPageComponent,
+    AdminDashboardComponent,
+    UserDashboardComponent,
+    AdminMenuComponent,
+    UserMenuComponent,
+    DeleteProductPopUpComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +65,21 @@ import {MatIcon} from "@angular/material/icon";
     HttpClientModule,
     MatButtonModule,
     BrowserAnimationsModule,
-    MatIcon
+    MatIcon,
+    InputGroupModule,
+    InputGroupAddonModule,
+    InputTextModule,
+    MatError,
+    MatLabel,
+    MatFormField,
+    MatCardContent,
+    MatCardTitle,
+    MatCard,
+    MatCardHeader,
+    MatCardActions,
+    MatInput,
+    MatCardSubtitle,
+    MatDialogModule
   ],
   providers:[
     MyFirstService,

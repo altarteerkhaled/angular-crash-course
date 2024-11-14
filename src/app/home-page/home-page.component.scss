@@ -1,0 +1,112 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(45deg, #2ebf91, #8360c3);
+  color: white;
+  padding: 20px;
+
+  .banner {
+    text-align: center;
+    margin-bottom: 40px;
+
+    h1 {
+      font-size: 2.5em;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin: 10px 0;
+    }
+
+    button {
+      margin-top: 20px;
+    }
+  }
+
+  .featured-products {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    margin-bottom: 40px;
+
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+      }
+
+      .product-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Pushes content to top and button to bottom */
+        background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        height: 100%; /* Ensures full height for flex layout */
+
+        img {
+          display: block;
+          margin: auto;
+          overflow: hidden;
+          width:  200px;
+          height: 200px;
+          object-fit: cover;
+          border-radius: 25px
+        }
+
+        h3 {
+          margin: 15px 0 10px;
+        }
+
+        p {
+          margin: 10px 0;
+        }
+
+        button {
+          margin-top: auto; /* Pushes button to the bottom of the flex container */
+        }
+      }
+
+
+    }
+  }
+
+  .categories {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .category-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+
+      .category-card {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 15px 25px;
+        border-radius: 10px;
+        font-size: 1.2em;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+  }
+}

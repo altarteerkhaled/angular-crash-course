@@ -4,12 +4,17 @@ import {MyFirstCompComponent} from "./my-first-comp/my-first-comp.component";
 import {AboutComponent} from "./about/about.component";
 import {ProductsComponent} from "./products/products.component";
 import {NewProductComponent} from "./new-product/new-product.component";
+import {LoginPageComponent} from "./login-page/login-page.component";
+import {AdminDashboardComponent} from "./admin-dashboard/admin-dashboard.component";
+import {UserDashboardComponent} from "./user-dashboard/user-dashboard.component";
+import {DeleteProductPopUpComponent} from "./delete-product-pop-up/delete-product-pop-up.component";
+import {HomePageComponent} from "./home-page/home-page.component";
 
 
 const routes: Routes = [
   {
     path: 'home',
-    component: MyFirstCompComponent
+    component: HomePageComponent
   },
   {
     path: 'about',
@@ -26,6 +31,26 @@ const routes: Routes = [
   {
     path: 'new-product',
     component: NewProductComponent
+  },
+  {
+    path:'login',
+    component: LoginPageComponent
+  },
+  { path: '',
+    redirectTo: 'login',
+    pathMatch: 'full'
+  },
+  {
+    path: 'adminHomePage',
+    component: AdminDashboardComponent
+  },
+  {
+    path: 'userHomePage',
+    component: UserDashboardComponent
+  },
+  {
+    path:'deleteProduct',
+    component: DeleteProductPopUpComponent
   }
 ];
 
